@@ -1,0 +1,13 @@
+<!-- 1)List all -->
+<% @tasks.each do |task| %>
+  <h2><%= link_to task.title, task_path(task)%></h2>
+  <p><%= task.details %></p>
+  <p ><%= task.completed %></p>
+<%= link_to "Edit an existing task", edit_task_path(task) %>
+<% end %>
+<%= link_to "Create a new task", tasks_new_path %>
+
+
+<!-- 3) Create a new task -->
+<!-- 4) Update an existing task -->
+<!-- 5) Remove / Destroy a task -->
